@@ -76,9 +76,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+      <a href="index.html" class="logo d-flex align-items-center">        
         <h1 class="sitename">PortMe</h1>
       </a>
 
@@ -129,53 +127,57 @@
         <div class="row gy-4">
 
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,                  
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  },
-                  "navigation": {
-                    "nextEl": ".swiper-button-next",
-                    "prevEl": ".swiper-button-prev"
+            <div class="image-slider-container">
+              <div class="portfolio-details-slider swiper init-swiper">
+  
+                <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,                  
+                    "slidesPerView": "auto",
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    },
+                    "navigation": {
+                      "nextEl": ".swiper-button-next",
+                      "prevEl": ".swiper-button-prev"
+                    }
                   }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/project 1login.png" alt="">
+                </script>
+  
+                <div class="swiper-wrapper align-items-center">
+  
+                  <div class="swiper-slide">
+                    <img src="assets/img/portfolio/project 1login.png" alt="">
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <img src="assets/img/portfolio/project1dashboard.png" alt="">
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <img src="assets/img/portfolio/project1barangmasuk.png" alt="">
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <img src="assets/img/portfolio/project1barangkeluar.png" alt="">
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <img src="assets/img/portfolio/project1kategoridus.png" alt="">
+                  </div>
+  
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/project1dashboard.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/project1barangmasuk.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/project1barangkeluar.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/project1kategoridus.png" alt="">
-                </div>
-
+                <div class="swiper-pagination"></div>
+                  <!-- Tombol navigasi -->
+                <div class="swiper-button-next custom-nav"></div>
+                <div class="swiper-button-prev custom-nav"></div>
+                
               </div>
-              <div class="swiper-pagination"></div>
-              <!-- Tombol navigasi -->
-              <div class="swiper-button-next custom-nav"></div>
-              <div class="swiper-button-prev custom-nav"></div>
             </div>
+            
           </div>
 
           <div class="col-lg-4">
