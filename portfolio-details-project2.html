@@ -27,6 +27,48 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Container hover area */
+    .image-slider-container {
+      position: relative;
+    }
+
+    /* Tombol navigasi */
+    .custom-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      z-index: 10;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .swiper-button-prev.custom-nav {
+      left: 10px;
+    }
+    .swiper-button-next.custom-nav {
+      right: 10px;
+    }
+
+    .image-slider-container:hover .custom-nav {
+      opacity: 1;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 20px;
+    }
+  </style>
+
 </head>
 
 <body class="portfolio-details-page">
@@ -87,24 +129,26 @@
         <div class="row gy-4">
 
           <div class="col-lg-8">
+            <div class="image-slider-container">
             <div class="portfolio-details-slider swiper init-swiper">
 
               <script type="application/json" class="swiper-config">
                 {
                   "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
+                  "speed": 600,                  
                   "slidesPerView": "auto",
                   "pagination": {
                     "el": ".swiper-pagination",
                     "type": "bullets",
                     "clickable": true
+                  },
+                  "navigation": {
+                    "nextEl": ".swiper-button-next",
+                    "prevEl": ".swiper-button-prev"
                   }
                 }
               </script>
-
+              
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
@@ -153,7 +197,11 @@
 
               </div>
               <div class="swiper-pagination"></div>
+                <!-- Tombol navigasi -->
+              <div class="swiper-button-next custom-nav"></div>
+              <div class="swiper-button-prev custom-nav"></div>              
             </div>
+            </div?
           </div>
 
           <div class="col-lg-4">
